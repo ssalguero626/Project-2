@@ -30,7 +30,7 @@
     <!-- Define the Navigation Bar -->
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand d-inline p-2 ml-5 bg-info text-white mb-0 pb-0" href="./index.html">NYC 311 Calls</a>
+        <a class="navbar-brand d-inline p-2 ml-5 bg-info text-white mb-0 pb-0" href="./index.html">Homepage</a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,27 +58,34 @@
             </ul>
 
             <div class="container">
-                <h3> 311 Calls </h3>
                 <hr>
-                <p>NYC gets thousands of non emergency calls a day. The agency with the most complaints is the NYPD.
-                    Followed by the Housing Preservation & Development.
-                    The borough with the most calls is Brooklyn.<br><br>
-
+                <p>This project was invisioned to share information about 311 calls in NYC. I would like to visualize
+                    the most common
+                    type of 311 calls made NYC, along with which agency receives the most calls and map the density of
+                    311 calls in NYC.<br><br>
                 </p>
+                <div id="intro-container" class="container-fluid main_background pt-5">
+                    <div id="header-row" class="row pt-5">
+                    </div>
+                    <div id="subheader-row" class="row pt-5">
+                        <div id="subheader-div" class="justify-center subheader-div col mt-5 mb-2 pl-5">
+                            <p style="font-size: 2.5vw;">NYC 311 calls</h1>
+                        </div>
+
+
+                        <!-- The div that holds our map -->
+                        <div id="map"></div>
 
 
 
 
-
-
-
-                <script src="static/js/config.js"></script>
-                <script src="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
-                <script src="https://d3js.org/d3.v5.min.js"></script>
-                <!-- Our JavaScript -->
-                <script src="static/js/logic.js"></script>
-                <script src="static/js/leaflet-heat.js"></script>
-                <script src="static/js/app.js"></script>
+                        <script src="static/js/config.js"></script>
+                        <script src="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
+                        <script src="https://d3js.org/d3.v5.min.js"></script>
+                        <!-- Our JavaScript -->
+                        <script src="static/js/logic.js"></script>
+                        <script src="static/js/leaflet-heat.js"></script>
+                        <script src="static/js/app.js"></script>
 </body>
 
 
