@@ -1,5 +1,26 @@
-// Plot D3 bar chart
+// Set parameters
 
+var svgWidth = 800;
+var svgHeight = 500;
+
+var margin = {
+    top: 20,
+    right: 40,
+    bottom: 80,
+    left: 100
+};
+
+var width = svgWidth - margin.left - margin.right;
+var height = svgHeight - margin.top - margin.bottom;
+
+// basic svg setup
+var svg = d3
+    .select("#bar")
+    .append("svg")
+    .attr("width", svgWidth)
+    .attr("height", svgHeight);
+
+// Plot D3 bar chart
 
 d3.json("/agency").then(data => {
     // console.log(data)
@@ -7,9 +28,9 @@ d3.json("/agency").then(data => {
     var keys = []
     var values = []
 
-    sortedlist.forEach(borough => {
-        keys.push(borough[0]);
-        values.push(borough[1])
+    sortedlist.forEach(angency => {
+        keys.push(angency[0]);
+        values.push(angency[1])
     })
 
     var data = [

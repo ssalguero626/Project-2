@@ -7,7 +7,8 @@ var myMap = L.map('map', {
 
 // Add tile layer
 
-L.titleLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
+L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
+    attribution: "© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>",
     tileSize: 512,
     maxZoom: 18,
     zoomOffset: -1,
@@ -15,7 +16,10 @@ L.titleLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_tok
     accessToken: API_KEY
 }).addTo(myMap);
 
-d3.json("/coordinates" function (response) {
+// Use this link to get the geojson data.
+var link = "app/data/311_service_requests_4Q19.geojson";
+
+d3.json(link, function (response) {
 
     console.log(response);
 
