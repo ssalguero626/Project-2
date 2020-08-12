@@ -16,10 +16,10 @@ L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     accessToken: API_KEY
 }).addTo(myMap);
 
-// Use this link to get the geojson data.
-var link = "app/data/311_service_requests_4Q19.geojson";
+// Use route to get heatmap data
 
-d3.json(link, function (response) {
+
+d3.json("/coordinates").then(function (data) {
 
     console.log(response);
 

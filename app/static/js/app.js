@@ -84,7 +84,7 @@ d3.json("/borough").then(data => {
 
 
 
-// Plot D3 borough bubble chart
+// Plot D3 complaint bubble chart
 
 d3.json("/complaint").then(data => {
     // console.log(data)
